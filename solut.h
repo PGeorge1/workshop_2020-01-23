@@ -23,5 +23,12 @@ public:
     Employee *create_new_employee (const std::string &name,
                                    int age,
                                    const std::vector<double> &wages);
+    Employee *findEmployee (const std::string &name);
     void freeAll ();
+    Employee **exportEmployeesAsArray();
+
+    ~EmployeeRegister ()
+    {
+      freeAll();
+    }
 };
